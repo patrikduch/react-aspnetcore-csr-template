@@ -1,0 +1,25 @@
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnv
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="react-app"></div>
+
+
+@if (hostingEnv.EnvironmentName.Equals("Development"))
+{
+@section scripts {
+    <script src="~/dist/main-client.js" asp-append-version="true"></script>
+}
+
+}
+else
+{
+@section scripts {
+    <script src="~/dist/main-client.js.gz" asp-append-version="true"></script>
+}
+
+}
+
+
