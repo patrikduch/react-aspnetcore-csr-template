@@ -4,9 +4,8 @@ const Home = () => {
 
     return (
         <>
-            <h1>React template by Patrik Duch</h1>
-            <div>
-                
+            <div className="test">
+                <h1>Page title</h1>   
             </div>
         </>
     )
